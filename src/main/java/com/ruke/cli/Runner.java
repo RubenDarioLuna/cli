@@ -14,7 +14,7 @@ import picocli.CommandLine.IFactory;
  * @since 3/11/2021
  */
 @Component
-public class MyApplicationRunner implements CommandLineRunner
+public class Runner implements CommandLineRunner
 {
     //#region Properties
     // auto-configured to inject PicocliSpringFactory
@@ -28,7 +28,7 @@ public class MyApplicationRunner implements CommandLineRunner
      * @param factory injected factory
      * @param command injected command
      */
-    public MyApplicationRunner( IFactory factory, Command command )
+    public Runner( IFactory factory, Command command )
     {
         this._factory = factory;
         this._command = command;
