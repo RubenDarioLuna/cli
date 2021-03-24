@@ -1,9 +1,6 @@
-package com.ruke.cli;
+package com.ruke.cli.commands;
 
-import java.io.BufferedReader;
 import java.io.Console;
-import java.io.IOException;
-import java.io.InputStreamReader;
 
 import picocli.CommandLine;
 

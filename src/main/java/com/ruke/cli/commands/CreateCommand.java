@@ -1,4 +1,4 @@
-package com.ruke.cli;
+package com.ruke.cli.commands;
 
 import org.springframework.stereotype.Component;
 

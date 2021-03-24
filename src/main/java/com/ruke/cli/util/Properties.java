@@ -1,4 +1,4 @@
-package com.ruke.cli;
+package com.ruke.cli.util;
 
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
@@ -24,12 +24,11 @@ public class Properties
      */
     public Properties( Environment environment )
     {
-        this._environment = environment;
+        _environment = environment;
     }
     //endregion
 
     //#region Public Static Methods
-
     /**
      * Method to obtain the value of a property according to its name
      *

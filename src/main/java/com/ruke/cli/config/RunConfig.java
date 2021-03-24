@@ -1,4 +1,6 @@
-package com.ruke.cli;
+package com.ruke.cli.config;
+
+import com.ruke.cli.commands.Command;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -14,7 +16,7 @@ import picocli.CommandLine.IFactory;
  * @since 3/11/2021
  */
 @Component
-public class Runner implements CommandLineRunner
+public class RunConfig implements CommandLineRunner
 {
     //#region Properties
     // auto-configured to inject PicocliSpringFactory
@@ -28,7 +30,7 @@ public class Runner implements CommandLineRunner
      * @param factory injected factory
      * @param command injected command
      */
-    public Runner( IFactory factory, Command command )
+    public RunConfig( IFactory factory, Command command )
     {
         this._factory = factory;
         this._command = command;

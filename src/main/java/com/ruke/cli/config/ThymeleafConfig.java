@@ -1,4 +1,6 @@
-package com.ruke.cli;
+package com.ruke.cli.config;
+
+import com.ruke.cli.util.Properties;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
