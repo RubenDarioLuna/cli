@@ -1,37 +1,47 @@
-package com.lunaru.democli.common.utilities;
+package com.ruke.cli;
 
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 /**
- * *
+ * Class to get the properties of any configuration file
  *
- * @author ruben
+ * @author lunaru
  * @version 1.0
- * @since 3/3/2021
+ * @since 3/20/2021
  */
 @Component
 public class Properties
 {
     //#region Privates Attributes
-    private static Environment _properties;
+    private static Environment _environment;
     //#endregion
 
     //#region Constructs
     /**
      * Class constructor.
-     * @param properties
+     * @param environment injected Environment
      */
-    public Properties( Environment properties )
+    public Properties( Environment environment )
     {
-        this._properties = properties;
+        this._environment = environment;
     }
     //endregion
 
     //#region Public Static Methods
+
+    /**
+     * Method to obtain the value of a property according to its name
+     *
+     * @param nameProperty name of the property to get
+     * @return property value
+     */
     public static String getProperty( String nameProperty )
     {
-        return _properties.getProperty( nameProperty );
+        if( _environment.containsProperty( nameProperty ) )
+            return _environment.getProperty( nameProperty );
+        else
+            return nameProperty;
     }
     //#endregion
 }
